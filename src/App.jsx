@@ -1,11 +1,14 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Moon, SunMedium, Compass, GraduationCap, Menu, User, X } from "lucide-react";
+import { Moon, SunMedium, Compass, GraduationCap, Menu, User, X, Bot, MessageCircle, MessageSquare } from "lucide-react";
 import Home from "./pages/Home.jsx";
-import Paths from "./pages/Paths.jsx";
-import Quiz from "./pages/Quiz.jsx";
+import Chatbot from "./pages/Chatbot.jsx";
+import Simulation from "./pages/Simulation.jsx";
 import Profile from "./pages/Profile.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
 import { motion, AnimatePresence } from "framer-motion";
+import RequireAuth from "./components/RequireAuth.jsx";
 
 function ThemeToggle() {
   const [theme, setTheme] = useState(
@@ -38,7 +41,7 @@ function Navbar() {
       <div className="container relative flex items-center justify-between">
         {/* Hamburger icon - mobile only */}
         <button
-          className="btn btn-ghost btn-circle lg:hidden"
+          className="btn btn-ghost btn-circle"
           onClick={() => setOpen(true)}
           aria-label="Open menu"
         >
@@ -49,7 +52,7 @@ function Navbar() {
           <NavLink to="/" className="text-xl font-bold">Future Track</NavLink>
         </div>
         {/* Theme toggle - mobile only */}
-        <div className="lg:hidden flex items-center">
+        <div className="flex items-center">
           <ThemeToggle />
         </div>
       </div>
@@ -64,7 +67,7 @@ function Navbar() {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="fixed inset-0 z-50 bg-gradient-to-b from-primary to-base-100/95 backdrop-blur flex flex-col"
           >
-            <div className="flex justify-end p-4">
+            <div className="flex justify-start p-4">
               <button
                 className="btn btn-ghost btn-circle"
                 onClick={() => setOpen(false)}
@@ -85,24 +88,24 @@ function Navbar() {
                 Trang chủ
               </NavLink>
               <NavLink
-                to="/paths"
+                to="/chatbot"
                 className={({ isActive }) =>
                   `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} rounded-xl`
                 }
                 onClick={() => setOpen(false)}
               >
-                <Compass size={20} className="inline mr-2" />
-                Lộ trình
+                <Bot size={20} className="inline mr-2" />
+                Chatbot
               </NavLink>
               <NavLink
-                to="/quiz"
+                to="/simulation"
                 className={({ isActive }) =>
                   `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} rounded-xl`
                 }
                 onClick={() => setOpen(false)}
               >
                 <GraduationCap size={20} className="inline mr-2" />
-                Trắc nghiệm
+                Mô phỏng
               </NavLink>
               <NavLink
                 to="/profile"
@@ -126,17 +129,47 @@ export default function App() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="container py-8">
+      <main className="container">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/paths" element={<Paths />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/"
+            element={
+              <RequireAuth>
+                <Home />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/chatbot"
+            element={
+              <RequireAuth>
+                <Chatbot />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/simulation"
+            element={
+              <RequireAuth>
+                <Simulation />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <RequireAuth>
+                <Profile />
+              </RequireAuth>
+            }
+          />
         </Routes>
       </main>
-      <footer className="container py-10 text-sm text-base-content/70">
+      <footer className="container pb-10 text-sm text-base-content/70">
         <div className="divider"></div>
-        <p>© {new Date().getFullYear()} CareerGuide — Định hướng nghề nghiệp thời 4.0</p>
+        <p>© {new Date().getFullYear()} Future Track — Định hướng nghề nghiệp thời 4.0</p>
       </footer>
     </div>
   );

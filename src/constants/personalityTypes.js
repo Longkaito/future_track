@@ -1,0 +1,18 @@
+export const PERSONALITY_TYPES = [
+  { id: "ENFJ", value: "ENFJ - The Teacher - Người Chỉ Dạy" },
+  { id: "ENFP", value: "ENFP - Campaigner - Người truyền cảm hứng" },
+  { id: "ENTJ", value: "ENTJ - Executive - Nhà Điều Hành" },
+  { id: "ENTP", value: "ENTP - The Inventor - Người Phát Minh" },
+  { id: "ESFJ", value: "ESFJ - The Consul - Người lãnh sự" },
+  { id: "ESFP", value: "ESFP - The Performer - Người Trình Diễn" },
+  { id: "ESTJ", value: "ESTJ - The Supervisors - Người Giám Sát" },
+  { id: "ESTP", value: "ESTP – The Promoter – Người Đề Xướng" },
+  { id: "INFJ", value: "INFJ - The Protector - Người Bảo vệ" },
+  { id: "INFP", value: "INFP - The Mediator - Người Hòa Giải" },
+  { id: "INTJ", value: "INTJ - The Analyst - Người Phân Tích" },
+  { id: "INTP", value: "INTP - The Logician - Nhà Logic Học" },
+  { id: "ISFJ", value: "ISFJ - The Nurturer - Người Nuôi Dưỡng" },
+  { id: "ISFP", value: "ISFP - The Artists - Người nghệ sĩ" },
+  { id: "ISTJ", value: "ISTJ - The Guardian - Người giám hộ" },
+  { id: "ISTP", value: "ISTP - The Crafter - Thợ Thủ Công" },
+]; 
