@@ -7,6 +7,7 @@ import Simulation from "./pages/Simulation.jsx";
 import Profile from "./pages/Profile.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import Portfolio from "./pages/Portfolio";
 import { motion, AnimatePresence } from "framer-motion";
 import RequireAuth from "./components/RequireAuth.jsx";
 
@@ -108,6 +109,17 @@ function Navbar() {
                 Mô phỏng
               </NavLink>
               <NavLink
+                to="/portfolio"
+                className={({ isActive }) =>
+                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} rounded-xl`
+                }
+                onClick={() => setOpen(false)}
+              >
+                <span className="inline mr-2">📁</span>
+                Portfolio
+              </NavLink>
+              
+              <NavLink
                 to="/profile"
                 className={({ isActive }) =>
                   `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} rounded-xl`
@@ -154,6 +166,14 @@ export default function App() {
             element={
               <RequireAuth>
                 <Simulation />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/portfolio"
+            element={
+              <RequireAuth>
+                <Portfolio />
               </RequireAuth>
             }
           />
