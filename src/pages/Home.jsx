@@ -107,7 +107,7 @@ const news = [
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
-  const surveyUrl = "https://mbti.vn/"; // Thay bằng link khảo sát thực tế
+  const surveyUrl = "https://www.16personalities.com/"; // Thay bằng link khảo sát thực tế
   const [selectedNews, setSelectedNews] = useState(null);
   const [showPersonalityPopup, setShowPersonalityPopup] = useState(false);
   const [selectedPersonality, setSelectedPersonality] = useState("");
