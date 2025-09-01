@@ -9,11 +9,12 @@ export default {
   plugins: [require("@tailwindcss/forms"), require("daisyui")],
   daisyui: {
     themes: [
-      // chọn 2-3 theme trẻ trung, dễ switch
-      "cupcake",   // pastel tươi
-      "emerald",   // xanh hiện đại
-      "dracula",   // dark mode phong cách
+      "emerald",    // sáng (hiện tại)
+      "dark",       // tối đơn giản
+      "emerald",      // tối với xanh dương
+      "forest",     // tối với xanh lá
+      "business",   // tối chuyên nghiệp
     ],
-    darkTheme: "dracula",
+    darkTheme: "dark", // đặt theme tối mặc định
   },
 };

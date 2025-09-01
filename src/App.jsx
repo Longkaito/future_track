@@ -8,12 +8,13 @@ import Profile from "./pages/Profile.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Portfolio from "./pages/Portfolio";
+import ExpertConection from "./pages/ExpertConection.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 import RequireAuth from "./components/RequireAuth.jsx";
 
 function ThemeToggle() {
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") || "cupcake"
+    localStorage.getItem("theme") || "dracula"
   );
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -21,7 +22,7 @@ function ThemeToggle() {
   }, [theme]);
 
   const toggle = () => {
-    setTheme((t) => (t === "dracula" ? "cupcake" : "dracula"));
+    setTheme((t) => (t === "emerald" ? "dracula" : "emerald"));
   };
 
   return (
@@ -81,7 +82,7 @@ function Navbar() {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} rounded-xl`
+                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} hover:text-white rounded-xl`
                 }
                 onClick={() => setOpen(false)}
               >
@@ -91,7 +92,7 @@ function Navbar() {
               <NavLink
                 to="/chatbot"
                 className={({ isActive }) =>
-                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} rounded-xl`
+                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} hover:text-white rounded-xl`
                 }
                 onClick={() => setOpen(false)}
               >
@@ -101,7 +102,7 @@ function Navbar() {
               <NavLink
                 to="/simulation"
                 className={({ isActive }) =>
-                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} rounded-xl`
+                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} hover:text-white rounded-xl`
                 }
                 onClick={() => setOpen(false)}
               >
@@ -111,18 +112,27 @@ function Navbar() {
               <NavLink
                 to="/portfolio"
                 className={({ isActive }) =>
-                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} rounded-xl`
+                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} hover:text-white rounded-xl`
                 }
                 onClick={() => setOpen(false)}
               >
                 <span className="inline mr-2">📁</span>
                 Portfolio
               </NavLink>
-              
+              <NavLink
+                to="/expertconection"
+                className={({ isActive }) =>
+                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} hover:text-white rounded-xl`
+                }
+                onClick={() => setOpen(false)}
+              >
+                <MessageCircle size={20} className="inline mr-2" />
+                Kết nối chuyên gia
+              </NavLink>
               <NavLink
                 to="/profile"
                 className={({ isActive }) =>
-                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} rounded-xl`
+                  `${linkBase} ${isActive ? linkActive : "hover:bg-base-200"} hover:text-white rounded-xl`
                 }
                 onClick={() => setOpen(false)}
               >
@@ -182,6 +192,14 @@ export default function App() {
             element={
               <RequireAuth>
                 <Profile />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/expertconection"
+            element={
+              <RequireAuth>
+                <ExpertConection />
               </RequireAuth>
             }
           />

@@ -10,18 +10,98 @@ const news = [
     desc: "Trí tuệ nhân tạo (AI) đang tác động mạnh mẽ đến nhiều ngành nghề, từ sản xuất đến dịch vụ. Các chuyên gia dự báo rằng trong 5 năm tới, kỹ năng liên quan đến AI sẽ trở thành yêu cầu bắt buộc ở nhiều vị trí công việc.",
     thumb: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
     content: "Trí tuệ nhân tạo (AI) đang tác động mạnh mẽ đến nhiều ngành nghề, từ sản xuất đến dịch vụ. Các chuyên gia dự báo rằng trong 5 năm tới, kỹ năng liên quan đến AI sẽ trở thành yêu cầu bắt buộc ở nhiều vị trí công việc. Điều này đòi hỏi người lao động phải liên tục cập nhật kiến thức và kỹ năng mới để thích nghi với sự thay đổi nhanh chóng của thị trường lao động.",
+    personality: "INTJ",
   },
   {
     title: "Top ngành nghề hot năm 2024",
     desc: "Theo báo cáo mới nhất, các ngành như Data Science, Product Management, Digital Marketing tiếp tục dẫn đầu về nhu cầu tuyển dụng và mức lương hấp dẫn.",
     thumb: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80",
     content: "Theo báo cáo mới nhất, các ngành như Data Science, Product Management, Digital Marketing tiếp tục dẫn đầu về nhu cầu tuyển dụng và mức lương hấp dẫn. Các doanh nghiệp đang tìm kiếm những ứng viên có kỹ năng phân tích dữ liệu, quản lý sản phẩm và tiếp thị số để đáp ứng nhu cầu phát triển kinh doanh.",
+    personality: "ENTJ",
   },
   {
     title: "Bí quyết phỏng vấn thành công",
     desc: "Chuẩn bị kỹ lưỡng, tự tin và thể hiện sự phù hợp với vị trí ứng tuyển là những yếu tố then chốt giúp bạn ghi điểm trong mắt nhà tuyển dụng.",
     thumb: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
     content: "Chuẩn bị kỹ lưỡng, tự tin và thể hiện sự phù hợp với vị trí ứng tuyển là những yếu tố then chốt giúp bạn ghi điểm trong mắt nhà tuyển dụng. Ngoài ra, việc tìm hiểu kỹ về công ty và đặt câu hỏi thông minh cũng giúp bạn nổi bật hơn so với các ứng viên khác.",
+    personality: "ENFJ",
+  },
+  {
+    title: "Kỹ năng mềm quan trọng trong thời đại số",
+    desc: "Kỹ năng giao tiếp, làm việc nhóm và giải quyết vấn đề ngày càng được các nhà tuyển dụng đánh giá cao.",
+    thumb: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
+    content: "Trong thời đại số, kỹ năng mềm như giao tiếp, làm việc nhóm, giải quyết vấn đề và thích nghi với thay đổi là yếu tố then chốt giúp bạn thành công trong môi trường làm việc hiện đại.",
+    personality: "ESFJ",
+  },
+  {
+    title: "Làm việc từ xa: Xu hướng hay thách thức?",
+    desc: "Làm việc từ xa mang lại sự linh hoạt nhưng cũng đòi hỏi kỹ năng tự quản lý và giao tiếp hiệu quả.",
+    thumb: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80",
+    content: "Làm việc từ xa đang trở thành xu hướng phổ biến, nhưng cũng đặt ra nhiều thách thức về quản lý thời gian, duy trì động lực và giao tiếp hiệu quả với đồng nghiệp.",
+    personality: "INFP",
+  },
+  {
+    title: "Tương lai ngành công nghệ thông tin",
+    desc: "Ngành CNTT tiếp tục phát triển mạnh mẽ với nhiều cơ hội việc làm hấp dẫn cho các bạn trẻ.",
+    thumb: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    content: "Công nghệ thông tin là lĩnh vực có tốc độ phát triển nhanh, mở ra nhiều cơ hội việc làm với mức lương cạnh tranh và môi trường sáng tạo.",
+    personality: "ISTP",
+  },
+  {
+    title: "Nghề sáng tạo: Cơ hội cho người nghệ sĩ",
+    desc: "Thiết kế, nhiếp ảnh, nghệ thuật số... là những ngành nghề hấp dẫn cho người yêu sáng tạo.",
+    thumb: "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80",
+    content: "Các ngành nghề sáng tạo như thiết kế đồ họa, nhiếp ảnh, nghệ thuật số đang thu hút nhiều bạn trẻ đam mê sáng tạo và mong muốn thể hiện cá tính riêng.",
+    personality: "ISFP",
+  },
+  {
+    title: "Vai trò của nhà lãnh đạo trong doanh nghiệp hiện đại",
+    desc: "Nhà lãnh đạo cần có tầm nhìn, khả năng truyền cảm hứng và quản lý đội nhóm hiệu quả.",
+    thumb: "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80",
+    content: "Lãnh đạo hiện đại không chỉ là người ra quyết định mà còn là người truyền cảm hứng, xây dựng văn hóa doanh nghiệp và phát triển đội ngũ.",
+    personality: "ENTP",
+  },
+  {
+    title: "Phụ nữ và sự nghiệp: Vượt qua rào cản",
+    desc: "Ngày càng nhiều phụ nữ thành công trong các lĩnh vực STEM, quản lý và khởi nghiệp.",
+    thumb: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+    content: "Phụ nữ ngày nay đang khẳng định vị thế trong nhiều lĩnh vực, vượt qua định kiến và tạo dấu ấn mạnh mẽ trong sự nghiệp.",
+    personality: "INFJ",
+  },
+  {
+    title: "Học tập suốt đời: Chìa khóa thành công",
+    desc: "Việc liên tục học hỏi và cập nhật kiến thức giúp bạn thích nghi với sự thay đổi của thị trường lao động.",
+    thumb: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    content: "Học tập suốt đời là yếu tố quan trọng giúp bạn phát triển bản thân, nâng cao năng lực và mở rộng cơ hội nghề nghiệp.",
+    personality: "ISTJ",
+  },
+  {
+    title: "Khởi nghiệp: Cơ hội và thách thức cho người trẻ",
+    desc: "Khởi nghiệp mang lại nhiều cơ hội nhưng cũng đòi hỏi sự kiên trì, sáng tạo và chấp nhận rủi ro.",
+    thumb: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
+    content: "Khởi nghiệp là hành trình đầy thử thách, đòi hỏi bạn trẻ phải có ý chí, sáng tạo và khả năng thích nghi với thay đổi.",
+    personality: "ESTP",
+  },
+  {
+    title: "Tư duy phản biện: Kỹ năng không thể thiếu",
+    desc: "Tư duy phản biện giúp bạn phân tích, đánh giá và đưa ra quyết định chính xác trong công việc.",
+    thumb: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80",
+    content: "Kỹ năng tư duy phản biện giúp bạn giải quyết vấn đề hiệu quả, nâng cao năng lực lãnh đạo và thích nghi với môi trường làm việc hiện đại.",
+    personality: "INTP",
+  },
+  {
+    title: "Quản lý thời gian hiệu quả",
+    desc: "Biết cách sắp xếp công việc và ưu tiên nhiệm vụ giúp bạn đạt hiệu suất cao.",
+    thumb: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    content: "Quản lý thời gian là kỹ năng quan trọng giúp bạn cân bằng giữa công việc và cuộc sống, đồng thời nâng cao hiệu quả làm việc.",
+    personality: "ESTJ",
+  },
+  {
+    title: "Tìm kiếm việc làm trong thời đại số",
+    desc: "Các nền tảng tuyển dụng trực tuyến và mạng xã hội mở ra nhiều cơ hội việc làm mới.",
+    thumb: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80",
+    content: "Việc sử dụng các nền tảng tuyển dụng trực tuyến và xây dựng thương hiệu cá nhân trên mạng xã hội giúp bạn tiếp cận nhiều cơ hội việc làm hấp dẫn.",
+    personality: "ENFP",
   },
 ];
 
@@ -68,6 +148,14 @@ export default function Home() {
     setShowPersonalityPopup(true);
   };
 
+  const user = JSON.parse(localStorage.getItem("userInfo") || "{}");
+  let filteredNews = news;
+  if (!!user.personality) {
+    filteredNews = news.filter(
+      (item) => !user.personality || item.personality === user.personality
+    );
+  }
+
   return (
     <div className="min-h-screen">
       {/* Button khảo sát ở góc trái */}
@@ -86,7 +174,7 @@ export default function Home() {
           className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8"
         >
           <h2 className="text-xl font-bold col-span-full">Tin tức</h2>
-          {news.map((item) => (
+          {filteredNews.map((item) => (
             <div
               key={item.title}
               className="card flex-row bg-base-100 shadow-lg hover:shadow-2xl transition-all cursor-pointer border border-base-200"
@@ -150,6 +238,7 @@ export default function Home() {
                 setTimeout(() => setShowToast(false), 2000);
                 setShowPersonalityPopup(false);
                 setShowModal(false);
+                // window.location.reload();
               } catch (err) {
                 alert("Cập nhật thất bại!");
               }

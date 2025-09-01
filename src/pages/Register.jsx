@@ -56,6 +56,7 @@ export default function Register() {
           name: form.name,
           username: form.email,
           password: hashedPassword,
+          personality: null,
           sex: form.gender,
           grade: form.class,
         }),
