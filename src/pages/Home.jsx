@@ -151,9 +151,10 @@ export default function Home() {
   const user = JSON.parse(localStorage.getItem("userInfo") || "{}");
   let filteredNews = news;
   if (!!user.personality) {
-    filteredNews = news.filter(
-      (item) => !user.personality || item.personality === user.personality
-    );
+    // Lấy ngẫu nhiên 4 bài từ news
+    filteredNews = [...news]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 4);
   }
 
   return (

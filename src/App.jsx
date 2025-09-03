@@ -117,7 +117,7 @@ function Navbar() {
                 onClick={() => setOpen(false)}
               >
                 <span className="inline mr-2">📁</span>
-                Portfolio
+                CV
               </NavLink>
               <NavLink
                 to="/expertconection"
